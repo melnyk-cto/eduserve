@@ -1,13 +1,152 @@
 @import "./variables";
 
 .banner {
-  .buttons {
-    display:     flex;
-    input {
-      border-radius:     8px 0 0 8px ;
+}
+
+.buttons {
+  display:   flex;
+  max-width: 549px;
+  input {
+    border-radius: 8px 0 0 8px;
+    background:    transparent;
+  }
+  button {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.rating {
+  h4 {
+    font-weight: 400;
+  }
+}
+
+.platform {
+  .platformItems {
+    width:      30%;
+    box-shadow: 0 25px 15px 0 rgba(190, 190, 190, 0.10);
+    padding:    42px;
+    text-align: center;
+    h5 {
+      color: #26C644;
     }
-    button {
-      border-radius: 0 8px 8px 0;
+    .icon {
+      position:   relative;
+      left:       4px;
+      transition: .2s linear;
+      transform:  translate(0, 0);
+      display:    inline-block;
+    }
+    a:hover, a:active {
+      .icon {
+        transform: translate(10px, 0);
+      }
+    }
+  }
+}
+
+.goals {
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  .goalsItem1, .goalsItem2 {
+    width: 50%;
+  }
+}
+
+.colored {
+  .coloredItem1, .coloredItem2 {
+    width:      50%;
+    text-align: center;
+    padding:    5% 15%;
+    background: #fbe59c;
+  }
+  .coloredItem2 {
+    background: #ccf5f0;
+  }
+}
+
+.author {
+  .authorItem1 {
+    width:      50%;
+    text-align: center;
+    position:   relative;
+    z-index:    2;
+  }
+  .authorItem2 {
+    width:      50%;
+    position:   relative;
+    z-index:    1;
+    transform:  translate(-60px, 0);
+    margin-top: auto;
+  }
+  .customer {
+    margin-bottom: 32px;
+    position:      relative;
+    cursor:        pointer;
+
+    &:before {
+      content:         '';
+      position:        absolute;
+      z-index:         1;
+      left:            50%;
+      top:             50%;
+      width:           20%;
+      height:          20%;
+      transform:       translate(-50%, -50%);
+      background:      url("../public/icons/play.svg") center center no-repeat;
+      background-size: contain;
+      transition:      .2s linear;
+    }
+  }
+  .authorQuote {
+    padding:       70px 50px;
+    border:        2px solid #3DD8C5;
+    border-radius: 42px;
+    position:      relative;
+    &:before {
+      content:         '';
+      position:        absolute;
+      z-index:         1;
+      left:            0;
+      bottom:          10%;
+      transform:       translate(-100%, 0);
+      width:           30px;
+      height:          40px;
+      background:      url("../public/icons/triangle.svg") center center no-repeat;
+      background-size: contain;
+    }
+    .icon {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.contact {
+  background: #f5f5f5;
+}
+
+@media screen and (max-width: 992px) {
+  .platform {
+    .platformItems {
+      width: 100%;
+    }
+  }
+  .goals {
+    .goalsItem1, .goalsItem2 {
+      width: 100%;
+    }
+  }
+  .colored {
+    .coloredItem1, .coloredItem2 {
+      width: 100%;
+    }
+  }
+  .author {
+    .authorItem1, .authorItem2 {
+      width:     100%;
+      transform: translate(0, 0);
+
     }
   }
 }

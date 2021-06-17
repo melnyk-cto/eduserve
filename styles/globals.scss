@@ -59,7 +59,6 @@ h3 {
 h4 {
   font-size:     28px;
   margin-bottom: 1rem;
-  font-weight: 400;
 }
 
 h5 {
@@ -79,7 +78,7 @@ p {
 
 a {
   cursor:          pointer;
-  text-decoration: underline;
+  text-decoration: none;
   &:hover, &:active {
     text-decoration: none;
     opacity:         .7;
@@ -197,7 +196,7 @@ input[disabled] {
 
 .btn-primary, .btn-second {
   cursor:          pointer;
-  display:         flex;
+  display:         inline-flex;
   white-space:     nowrap;
   align-items:     center;
   justify-content: center;
@@ -219,8 +218,9 @@ input[disabled] {
 }
 
 .btn-second {
-  color:      $whiteColor;
-  background: $mainColor;
+  color:      $blackColor;
+  background: transparent;
+  border:     1px solid $blackColor;
 }
 
 .no-scroll {
