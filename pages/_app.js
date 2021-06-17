@@ -1,6 +1,7 @@
-import '../styles/globals.css'
+// assets
+import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({Component, pageProps}) {
   return <Component {...pageProps} />
 }
 

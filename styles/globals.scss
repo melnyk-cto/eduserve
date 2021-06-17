@@ -1,0 +1,317 @@
+@import "./variables";
+@import "./fonts";
+
+@media (any-hover: hover) {
+
+}
+
+*, *:after, *:before {
+  margin:      0;
+  padding:     0;
+  box-sizing:  border-box;
+  outline:     none;
+  font-family: Roboto, sans-serif;
+  color:       $blackColor;
+  font-style:  normal;
+}
+
+body, html {
+  margin:     0;
+  padding:    0;
+  height:     100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+main {
+  padding-top: 60px;
+  position:    relative;
+}
+
+h1 {
+  font-family:   Poppins, sans-serif;
+  font-size:     30px;
+  font-weight:   bold;
+  line-height:   1.21;
+  margin-bottom: 24px;
+  span {
+    color: $mainColor;
+  }
+}
+
+h2 {
+  font-family: Poppins, sans-serif;
+  font-size:   40px;
+  font-weight: bold;
+}
+
+h3 {
+  font-family:   Poppins, sans-serif;
+  font-size:     30px;
+  font-weight:   bold;
+  line-height:   1.23;
+  margin-bottom: 1.25rem;
+  span {
+    font-family: Poppins, sans-serif;
+    font-weight: normal;
+  }
+}
+
+h5 {
+  font-size:     20px;
+  font-weight:   normal;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size:     1rem;
+  font-weight:   bold;
+  line-height:   1.55;
+  margin-bottom: 6px;
+}
+
+
+p, a {
+  font-size:     1rem;
+  line-height:   1.49;
+  color:         $blackColor;
+  margin-bottom: 0;
+  font-weight:   normal;
+}
+
+
+a {
+  cursor:          pointer;
+  text-decoration: underline;
+  &:hover, &:active {
+    text-decoration: none;
+    opacity:         .7;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-size:     1rem;
+  font-weight:   bold;
+  line-height:   1.55;
+  display:       block;
+}
+
+input, textarea, select {
+  width:            100%;
+  border:           0.0625rem solid #E4E8EB;
+  padding:          0.9rem 1rem;
+  font-size:        0.875rem;
+  line-height:      1.36;
+  color:            $blackColor;
+  box-shadow:       none;
+  border-radius:    0.5rem;
+  background-color: $whiteColor;
+  &::placeholder {
+    color:     #728387;
+    font-size: 0.875rem;
+  }
+  &:hover, &:focus {
+    border: 0.0625rem solid $mainColor;
+  }
+}
+
+.error {
+  color:         red !important;
+  font-size:     0.75rem !important;
+  padding-left:  1rem;
+  font-weight:   bold;
+  margin-bottom: 10px;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+textarea {
+  margin: 0.25rem 0 1.5rem 0;
+}
+
+iframe {
+  width: 100%;
+}
+
+button {
+  background: transparent;
+  box-shadow: none;
+  cursor:     pointer;
+  text {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+  }
+  &:hover, &:active {
+    opacity: .7;
+  }
+}
+
+select, input {
+  -moz-appearance:    none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance:         none;
+}
+
+select {
+  position:              relative;
+  background:            $whiteColor url("../public/icons/arrow-down.svg") center right no-repeat;
+  background-size:       2.5%;
+  background-position-x: 98%;
+  margin-right:          2rem;
+  padding-right:         2rem;
+  border:                1px solid #dfdfdf;
+}
+
+button[disabled] {
+  pointer-events: none;
+  filter:         grayscale(0.8);
+}
+
+input[disabled] {
+  pointer-events: none;
+  border:         0.0625rem solid #E4E8EB;
+}
+
+.btn-primary, .btn-second, .btn-black {
+  cursor:          pointer;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  box-shadow:      none;
+  background:      none;
+  border:          2px solid $mainColor;
+  color:           $mainColor;
+  border-radius:   8px;
+  width:           177px;
+  font-size:       16px;
+  line-height:     1.2;
+  letter-spacing:  -0.2px;
+  text-align:      center;
+  padding:         12px;
+  text-decoration: none;
+  &:active, &:hover {
+    opacity: .7;
+  }
+}
+
+.btn-second {
+  color:      $whiteColor;
+  background: $mainColor;
+}
+
+.btn-black {
+  color:        $whiteColor;
+  background:   $blackColor;
+  border-color: $blackColor;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-hidden {
+  opacity:    0;
+  visibility: hidden;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.container {
+  width:     100%;
+  max-width: 1920px;
+  margin:    0 auto;
+  padding:   0;
+}
+
+#__next {
+  display:        flex;
+  flex-direction: column;
+  height:         100%;
+}
+
+#__next-prerender-indicator {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  main {
+    padding-top: 110px;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  h2 {
+    font-size: 1.875rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+  p, li, a, label, input, input::placeholder {
+    font-size: 0.875rem;
+  }
+  label {
+    margin-bottom: 0.5rem;
+    input {
+      padding: 0.9rem 0.875rem;
+    }
+  }
+  select {
+    position:              relative;
+    background:            $whiteColor url("../public/icons/arrow-down.svg") center right no-repeat;
+    background-size:       4%;
+    background-position-x: 96%;
+    margin-right:          2rem;
+    padding-right:         2rem;
+    border:                1px solid #dfdfdf;
+  }
+  .btn-primary, .btn-second {
+    min-width: 100%;
+  }
+
+}
