@@ -5,7 +5,7 @@ import React from 'react'
 import Head from 'next/head'
 
 // components
-import { Footer, Header } from "../../components";
+// import { Footer, Header } from "../../components";
 
 export const Layout = ({children}) => {
   return (
@@ -22,9 +22,9 @@ export const Layout = ({children}) => {
         {/*<meta property="og:image" content="/SEO.png" />*/}
         <meta property="og:description" content="Eduserve web site" />
       </Head>
-      <Header />
+      {/*<Header />*/}
       <main>{children}</main>
-      <Footer />
+      {/*<Footer />*/}
     </>
   )
 };
