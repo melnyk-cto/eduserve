@@ -52,7 +52,7 @@ const Home = () => {
       <section className={styles.platform}>
         <div className='container ta-c'>
           <h2>One Platform, Many Solutions</h2>
-          <div className='row justify-content-between'>
+          <div className={styles.platformInner}>
             <div className={styles.platformItems}>
               <div className={styles.image}><Image src={surveys} alt='surveys' /></div>
               <h5>Surveys</h5>
@@ -76,7 +76,7 @@ const Home = () => {
       </section>
       <section className={styles.goals}>
         <div className='container'>
-          <div className='row align-items-center justify-content-between'>
+          <div className={styles.goalsInner}>
             <div className={styles.goalsItem1}>
               <Image src={workgoal} alt='workgoal' />
             </div>
@@ -94,7 +94,7 @@ const Home = () => {
       </section>
       <section className={classNames(styles.goals, styles.reverse)}>
         <div className='container'>
-          <div className='row align-items-center flex-row-reverse'>
+          <div className={styles.goalsInner}>
             <div className={styles.goalsItem1}>
               <Image src={employees} alt='workgoal' />
             </div>
@@ -111,7 +111,7 @@ const Home = () => {
         </div>
       </section>
       <section className={styles.colored}>
-        <div className='row'>
+        <div className={styles.coloredInner}>
           <div className={styles.coloredItem1}>
             <h3>For you</h3>
             <p>
@@ -132,7 +132,7 @@ const Home = () => {
       </section>
       <section className={styles.author}>
         <div className='container'>
-          <div className='row justify-content-center'>
+          <div className={styles.authorInner}>
             <div className={styles.authorItem1}>
               <div className={styles.customer}>
                 <Image src={customer} alt='c' />
@@ -156,7 +156,7 @@ const Home = () => {
       </section>
       <section className={styles.contact}>
         <div className='container'>
-          <div className='row ta-c justify-content-center'>
+          <div className={styles.contactInner}>
             <h3>Creat your free account today</h3>
             <label className={styles.buttons}>
               <input type='text' placeholder='Work Email' />

@@ -41,6 +41,11 @@
 }
 
 .platform {
+  .platformInner {
+    justify-content: space-between;
+    display:         flex;
+    flex-wrap:       wrap;
+  }
   h2 {
     margin-bottom: 90px;
   }
@@ -76,6 +81,12 @@
 
 .goals {
   padding: 58px 0;
+  .goalsInner {
+    display:         flex;
+    flex-wrap:       wrap;
+    align-items:     center;
+    justify-content: space-between;
+  }
   &.reverse {
     flex-direction: row-reverse;
   }
@@ -91,6 +102,10 @@
 }
 
 .colored {
+  .coloredInner {
+    display:   flex;
+    flex-wrap: wrap;
+  }
   .coloredItem1, .coloredItem2 {
     width:      50%;
     text-align: center;
@@ -109,6 +124,11 @@
   padding: 33px 0 135px 0;
   h4 {
     margin-bottom: 0;
+  }
+  .authorInner {
+    display:         flex;
+    flex-wrap:       wrap;
+    justify-content: center;
   }
   .authorItem1 {
     width:      43%;
@@ -183,6 +203,16 @@
     font-size:       18px;
     font-weight:     500;
   }
+  .contactInner {
+    display:         flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items:     center;
+    flex-wrap:       wrap;
+  }
+  .buttons {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -221,7 +251,7 @@
   .colored {
     .coloredItem1, .coloredItem2 {
       width:   100%;
-      padding: 15% 5%;
+      padding: 15% 0;
     }
   }
   .author {
