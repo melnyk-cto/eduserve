@@ -27,12 +27,12 @@ html {
 }
 
 main {
-  //padding-top: 60px;
-  position: relative;
+  padding-top: 24px;
+  position:    relative;
 }
 
 section {
-  padding: 80px 0;
+  padding: 86px 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size:     60px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 h2 {
@@ -53,12 +53,12 @@ h2 {
 
 h3 {
   font-size:     38px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 40px;
 }
 
 h4 {
   font-size:     28px;
-  margin-bottom: 1rem;
+  margin-bottom: 22px;
 }
 
 h5 {
@@ -211,7 +211,7 @@ input[disabled] {
   font-weight:     500;
   line-height:     1;
   text-align:      center;
-  padding:         14px 25px;
+  padding:         20px 36px;
   text-decoration: none;
   transition:      .2s linear;
   &:active, &:hover {

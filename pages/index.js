@@ -21,8 +21,8 @@ const Home = () => {
     <Layout>
       <section className={styles.banner}>
         <div className='container'>
-          <div className='row align-items-center justify-content-between'>
-            <div className='col-md-5'>
+          <div className={styles.bannerInner}>
+            <div className={styles.bannerItem1}>
               <h1>One Platform, Many Solutions</h1>
               <p>
                 Keep your team aligned and engaged. Manage tasks, create team schedules, track work time, and bill your
@@ -33,7 +33,7 @@ const Home = () => {
                 <button type='button' className='btn-filled'>Start My Trail</button>
               </label>
             </div>
-            <div className='col-md-6'>
+            <div className={styles.bannerItem2}>
               <Image src={banner} alt='banner' />
             </div>
           </div>
@@ -50,19 +50,19 @@ const Home = () => {
           <h2>One Platform, Many Solutions</h2>
           <div className='row justify-content-between'>
             <div className={styles.platformItems}>
-              <Image src={surveys} alt='surveys' />
+              <div className={styles.image}><Image src={surveys} alt='surveys' /></div>
               <h5>Surveys</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, abore et dolore magna aliqua.</p>
               <a href='#'>Learn More <span className={styles.icon}><Image src={arrowRight} alt='arrow' /></span></a>
             </div>
             <div className={styles.platformItems}>
-              <Image src={insights} alt='insights' />
+              <div className={styles.image}><Image src={insights} alt='insights' /></div>
               <h5>Insights</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, abore et dolore magna aliqua.</p>
               <a href='#'>Learn More <span className={styles.icon}><Image src={arrowRight} alt='arrow' /></span></a>
             </div>
             <div className={styles.platformItems}>
-              <Image src={enterprise} alt='enterprise' />
+              <div className={styles.image}><Image src={enterprise} alt='enterprise' /></div>
               <h5>Enterprise</h5>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, abore et dolore magna aliqua.</p>
               <a href='#'>Learn More <span className={styles.icon}><Image src={arrowRight} alt='arrow' /></span></a>
@@ -72,7 +72,7 @@ const Home = () => {
       </section>
       <section className={styles.goals}>
         <div className='container'>
-          <div className='row align-items-center'>
+          <div className='row align-items-center justify-content-between'>
             <div className={styles.goalsItem1}>
               <Image src={workgoal} alt='workgoal' />
             </div>
@@ -128,7 +128,7 @@ const Home = () => {
       </section>
       <section className={styles.author}>
         <div className='container'>
-          <div className='row'>
+          <div className='row justify-content-center'>
             <div className={styles.authorItem1}>
               <div className={styles.customer}>
                 <Image src={customer} alt='c' />

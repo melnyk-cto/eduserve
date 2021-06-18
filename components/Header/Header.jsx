@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 
 // library
 import Link from 'next/link'
-import { useRouter } from "next/router";
 import Image from 'next/image'
 
 // components
@@ -16,6 +15,7 @@ import logo from '../../public/icons/logo.svg'
 const links = [
   {name: 'Products', url: routes.products},
   {name: 'Solutions', url: routes.solutions},
+  {name: 'Company', url: routes.company},
   {name: 'Customers', url: routes.customers},
   {name: 'Resources', url: routes.resources},
   {name: 'Plans & Pricing', url: routes.plansPricing},
