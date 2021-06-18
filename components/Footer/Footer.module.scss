@@ -41,6 +41,7 @@
 
 @media screen and (max-width: 1200px) {
   .footer {
+    padding: 41px 0;
     .footerInner {
       flex-direction:  column;
       align-items:     center;
@@ -51,15 +52,16 @@
       justify-content: center;
       width:           100%;
       order:           1;
-      li {
-        margin: 0 0 32px 0;
+      li:not(:last-child) {
+        margin: 0 0 41px 0;
       }
     }
     .language {
       width:         100%;
       max-width:     320px;
       order:         2;
-      margin-bottom: 32px;
+      margin-top:    24px;
+      margin-bottom: 42px;
       select {
         margin-right: 0;
       }

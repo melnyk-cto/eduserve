@@ -7,6 +7,7 @@ import Image from 'next/image'
 
 // components
 import { routes } from '../../constants/routes';
+import { useScrollPosition } from "../../utilities/useScroll";
 
 // assets
 import styles from './Header.module.scss'
@@ -23,6 +24,7 @@ const links = [
 
 export const Header = () => {
 
+  const [scroll] = useScrollPosition();
   const [activeMobile, setActiveMobile] = useState(false);
   // const [user, setUser] = useState(false);
 
@@ -31,7 +33,7 @@ export const Header = () => {
   };
 
   return (
-    <div className={styles.header}>
+    <div className={`${styles.header} ${scroll > 50 ? styles.fixed : ''}`}>
       <div className='container'>
         <div className={styles.headerInner}>
           <Link href={routes.home}>

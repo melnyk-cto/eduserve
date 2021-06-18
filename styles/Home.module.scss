@@ -9,10 +9,12 @@
   }
   button {
     border-radius: 0 8px 8px 0;
+    padding:       26px 24px;
   }
 }
 
 .banner {
+  padding: 126px 0 86px 0;
   .bannerInner {
     display:         flex;
     flex-wrap:       wrap;
@@ -24,9 +26,6 @@
     p {
       margin-bottom: 60px;
     }
-    button {
-      padding: 24px 30px;
-    }
   }
   .bannerItem2 {
     width: 45%;
@@ -37,6 +36,31 @@
   padding: 86px 0 0 0;
   h4 {
     font-weight: 400;
+  }
+  .ratingInner {
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    line-height:     1;
+    font-size:       18px;
+    p {
+      margin-bottom: 0;
+      font-size:     18px;
+    }
+    span {
+      font-weight: 700;
+      margin-left: 7px;
+    }
+    .stars {
+      display:  flex;
+      position: relative;
+      top:      -1px;
+      margin:   0 7px;
+    }
+    .starsWrapper {
+      display:     flex;
+      align-items: center;
+    }
   }
 }
 
@@ -175,7 +199,7 @@
       position:        absolute;
       z-index:         1;
       left:            0;
-      bottom:          10%;
+      bottom:          15%;
       transform:       translate(-100%, 0);
       width:           30px;
       height:          40px;
@@ -219,57 +243,107 @@
   .banner {
     padding: 86px 0 0 0;
     .bannerInner {
-      text-align: center;
+      justify-content: center;
+      text-align:      center;
       .bannerItem1, .bannerItem2 {
-        width: 100%;
+        width:         100%;
+        margin-bottom: 16px;
+        p {
+          margin-bottom: 0;
+        }
       }
-      .bannerItem1, .bannerItem2 {
-        margin-bottom: 30px;
+      .bannerItem2 {
+        width:  88%;
+        margin: 0 auto 40px auto;
       }
     }
   }
   .rating {
-    padding: 20px 0;
+    padding: 46px 0 4px 0;
+    .ratingInner {
+      flex-direction: column;
+      p {
+        margin-bottom: 28px;
+      }
+      .starsWrapper {
+        margin-bottom: 10px;
+      }
+    }
   }
   .platform {
+    padding: 40px 0 10px 0;
     h2 {
       margin-bottom: 40px;
     }
     .platformItems {
-      width: 100%;
+      width:         100%;
+      margin-bottom: 56px;
     }
   }
   .goals {
     text-align: center;
+    padding:    20px 0 10px 0;
+    h3 {
+      font-size: 28px
+    }
+    .goalsInner {
+      flex-direction: column-reverse;
+    }
     .goalsItem1 {
       margin-bottom: 32px;
     }
     .goalsItem1, .goalsItem2 {
-      width: 100%;
+      width:         100%;
+      margin-bottom: 32px;
+      button {
+        width:     100%;
+        max-width: 400px;
+      }
     }
   }
   .colored {
+    h3 {
+      font-size:     38px;
+      margin-bottom: 42px;
+      line-height:   1.105;
+    }
     .coloredItem1, .coloredItem2 {
       width:   100%;
-      padding: 15% 0;
+      padding: 104px 12px;
     }
   }
   .author {
+    padding: 0 0 60px 0;
+    .authorItem2 {
+      width:  90%;
+      margin: 0 auto;
+    }
     .authorItem1, .authorItem2 {
       width:     100%;
       transform: translate(0, 0);
     }
     .authorQuote {
-      padding: 30px 20px;
+      padding: 16px 20px;
       p {
-        font-size: 16px;
+        font-size:   16px;
+        line-height: 1.9;
+      }
+      .icon {
+        width:         38px;
+        margin-bottom: 25px;
       }
     }
   }
   .contact {
+    padding:    72px 0;
+    text-align: center;
     h3 {
       font-size:     38px;
-      margin-bottom: 20px;
+      line-height:   1.105;
+      margin-bottom: 48px;
+    }
+    label {
+      margin-bottom: 38px;
     }
   }
 }

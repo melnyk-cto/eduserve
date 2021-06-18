@@ -15,6 +15,7 @@ import workgoal from '../public/images/workgoals.png'
 import employees from '../public/icons/employees.svg'
 import quote from '../public/icons/quote.svg'
 import customer from '../public/images/customer.png'
+import stars from '../public/icons/stars.svg'
 
 const Home = () => {
   return (
@@ -46,7 +47,13 @@ const Home = () => {
       <section className={styles.rating}>
         <div className='container ta-c'>
           <h4>Trusted by 50,000+ Customers Around the Globe</h4>
-          <p>“I couldn’t have asked for a better experience with Elevate!” 4.9</p>
+          <div className={styles.ratingInner}>
+            <p>“I couldn’t have asked for a better experience with Elevate!” <span> 4.9 </span></p>
+            <div className={styles.starsWrapper}>
+              <div className={styles.stars}><Image src={stars} alt='stars' /></div>
+              (2,200+)
+            </div>
+          </div>
         </div>
       </section>
       <section className={styles.platform}>
