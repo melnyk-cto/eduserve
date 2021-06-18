@@ -8,4 +8,6 @@ export const routes = {
   privacy: '/privacy',
   terms: '/terms',
   contact: '/contact',
+  signUp: '/signUp',
+  signIn: '/signIn',
 };

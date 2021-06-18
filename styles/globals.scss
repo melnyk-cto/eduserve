@@ -194,7 +194,7 @@ input[disabled] {
   border:         0.0625rem solid #E4E8EB;
 }
 
-.btn-primary, .btn-second {
+.btn-filled, .btn-second, .btn-outlined {
   cursor:          pointer;
   display:         inline-flex;
   white-space:     nowrap;
@@ -209,11 +209,22 @@ input[disabled] {
   font-weight:     500;
   line-height:     1;
   text-align:      center;
-  padding:         18px 25px;
+  padding:         14px 25px;
   text-decoration: none;
   transition:      .2s linear;
   &:active, &:hover {
     background: $secondColor;
+  }
+}
+
+.btn-outlined {
+  color:      $mainColor;
+  background: transparent;
+  border:     1px solid $mainColor;
+  &:active, &:hover {
+    background: transparent;
+    border:     1px solid $secondColor;
+    color:      $secondColor;
   }
 }
 

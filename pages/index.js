@@ -30,7 +30,7 @@ const Home = () => {
               </p>
               <label className={styles.buttons}>
                 <input type='text' placeholder='Work Email' />
-                <button type='button' className='btn-primary'>Start My Trail</button>
+                <button type='button' className='btn-filled'>Start My Trail</button>
               </label>
             </div>
             <div className='col-md-6'>
@@ -83,7 +83,7 @@ const Home = () => {
                 surveys help you connect at multiple touchpoints to find out exactly what your customers want, need, and
                 expect.
               </p>
-              <button type='button' className='btn-primary'>Creat Survey</button>
+              <button type='button' className='btn-filled'>Creat Survey</button>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ const Home = () => {
                 360 reviews, or even send out compliance quizzes. Whether you’re in HR or a team lead,employee surveys
                 help you get the answers you need.
               </p>
-              <button type='button' className='btn-primary'>Creat Survey</button>
+              <button type='button' className='btn-filled'>Creat Survey</button>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@ const Home = () => {
             <h3>Creat your free account today</h3>
             <label className={styles.buttons}>
               <input type='text' placeholder='Work Email' />
-              <button type='button' className='btn-primary'>Start My Trail</button>
+              <button type='button' className='btn-filled'>Start My Trail</button>
             </label>
             <p>Just Getting Started with creating a new Survey?</p>
             <a href='#'>Get a Free Account Here</a>

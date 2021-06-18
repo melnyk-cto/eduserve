@@ -1,9 +1,8 @@
 // core
-import React from 'react'
+import React, { useState } from 'react'
 
 // library
 import Link from 'next/link'
-import classNames from "classnames";
 import { useRouter } from "next/router";
 import Image from 'next/image'
 
@@ -14,48 +13,49 @@ import { routes } from '../../constants/routes';
 import styles from './Header.module.scss'
 import logo from '../../public/icons/logo.svg'
 
+const links = [
+  {name: 'Products', url: routes.products},
+  {name: 'Solutions', url: routes.solutions},
+  {name: 'Customers', url: routes.customers},
+  {name: 'Resources', url: routes.resources},
+  {name: 'Plans & Pricing', url: routes.plansPricing},
+];
+
 export const Header = () => {
-  const router = useRouter();
+
+  const [activeMobile, setActiveMobile] = useState(false);
+  // const [user, setUser] = useState(false);
+
+  const showMenu = () => {
+    setActiveMobile(!activeMobile);
+  };
 
   return (
-    <header className={styles.header}>
-      <div className={styles.navWrapper}>
-        <div className={styles.navTop}>
+    <div className={styles.header}>
+      <div className='container'>
+        <div className={styles.headerInner}>
           <Link href={routes.home}>
             <a className={styles.navLogo}>
               <Image src={logo} alt="Eduserve Logo" />
             </a>
           </Link>
-
-        </div>
-        <div className={styles.navItems}>
-          <Link href={routes.products}>
-            <a className={classNames(styles.menuItem, {[styles.active]: (router.pathname === routes.products)})}>
-              Products
-            </a>
-          </Link>
-          <Link href={routes.solutions}>
-            <a className={classNames(styles.menuItem, {[styles.active]: router.pathname === routes.solutions})}>
-              Solutions
-            </a>
-          </Link>
-          <Link href={routes.customers}>
-            <a className={classNames(styles.menuItem, {[styles.active]: router.pathname === routes.customers})}>
-              Customers
-            </a>
-          </Link>
-          <Link href={routes.resources}>
-            <a className={classNames(styles.menuItem, {[styles.active]: router.pathname === routes.resources})}>
-              Resources
-            </a>
-          </Link>
-          <Link href={routes.plansPricing}>
-            <a className={classNames(styles.menuItem, {[styles.active]: router.pathname === routes.plansPricing})}>
-              Plans & Pricing
-            </a>
-          </Link>
+          <nav className={`${styles.nav} ${activeMobile ? styles.active : ''}`}>
+            {links.map((link, index) => (
+              <Link key={index} href={link.url}>
+                <a>{link.name}</a>
+              </Link>
+            ))}
+            <button type='button' className={`btn-outlined ${styles.login}`}>Login</button>
+          </nav>
+          <button type='button' className={`btn-outlined ${styles.login}`}>Login</button>
+          <button
+            type="button"
+            className={activeMobile ? `${styles.burgerMenu}  ${styles.active}` : `${styles.burgerMenu}`}
+            onClick={() => showMenu()}>
+            <span className={styles.burgerMenuLines} />
+          </button>
         </div>
       </div>
-    </header>
+    </div>
   )
 };
