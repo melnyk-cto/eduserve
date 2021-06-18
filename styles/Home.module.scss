@@ -187,32 +187,59 @@
 
 @media screen and (max-width: 992px) {
   .banner {
+    padding: 86px 0 0 0;
     .bannerInner {
+      text-align: center;
       .bannerItem1, .bannerItem2 {
         width: 100%;
       }
+      .bannerItem1, .bannerItem2 {
+        margin-bottom: 30px;
+      }
     }
   }
+  .rating {
+    padding: 20px 0;
+  }
   .platform {
+    h2 {
+      margin-bottom: 40px;
+    }
     .platformItems {
       width: 100%;
     }
   }
   .goals {
+    text-align: center;
+    .goalsItem1 {
+      margin-bottom: 32px;
+    }
     .goalsItem1, .goalsItem2 {
       width: 100%;
     }
   }
   .colored {
     .coloredItem1, .coloredItem2 {
-      width: 100%;
+      width:   100%;
+      padding: 15% 5%;
     }
   }
   .author {
     .authorItem1, .authorItem2 {
       width:     100%;
       transform: translate(0, 0);
-
+    }
+    .authorQuote {
+      padding: 30px 20px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  .contact {
+    h3 {
+      font-size:     38px;
+      margin-bottom: 20px;
     }
   }
 }

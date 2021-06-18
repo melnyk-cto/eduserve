@@ -267,8 +267,19 @@ input[disabled] {
   display: none;
 }
 
+.desktop {
+  display: none !important;
+}
+
+.mobile {
+  display: flex !important;
+}
+
 
 @media screen and (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
   h1 {
     font-size: 38px;
   }
@@ -276,18 +287,17 @@ input[disabled] {
     font-size: 34px;
   }
   h3 {
-    font-size: 1.25rem;
-  }
-  h6 {
-    font-size: 0.875rem;
+    font-size: 28px;
   }
   p, li, a, label, input, input::placeholder {
-    font-size: 0.875rem;
+    font-size: 16px;
   }
-  label {
-    margin-bottom: 0.5rem;
-    input {
-      padding: 0.9rem 0.875rem;
-    }
+  .desktop {
+    display: flex !important;
   }
+
+  .mobile {
+    display: none !important;
+  }
+
 }

@@ -28,7 +28,7 @@ const Home = () => {
                 Keep your team aligned and engaged. Manage tasks, create team schedules, track work time, and bill your
                 clients from the same platform.
               </p>
-              <label className={styles.buttons}>
+              <label className={`${styles.buttons} mobile`}>
                 <input type='text' placeholder='Work Email' />
                 <button type='button' className='btn-filled'>Start My Trail</button>
               </label>
@@ -36,6 +36,10 @@ const Home = () => {
             <div className={styles.bannerItem2}>
               <Image src={banner} alt='banner' />
             </div>
+            <label className={`${styles.buttons} desktop`}>
+              <input type='text' placeholder='Work Email' />
+              <button type='button' className='btn-filled'>Start My Trail</button>
+            </label>
           </div>
         </div>
       </section>
