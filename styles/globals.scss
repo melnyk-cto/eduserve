@@ -177,11 +177,13 @@ select, input {
 select {
   position:              relative;
   background:            $whiteColor url("../public/icons/arrow-down.svg") center right no-repeat;
-  background-size:       2.5%;
-  background-position-x: 98%;
+  background-size:       4%;
+  background-position-x: 96%;
   margin-right:          2rem;
-  padding-right:         2rem;
   border:                1px solid #dfdfdf;
+  padding:               11px 7px;
+  color:                 #ced4da;
+  border-radius:         3px;
 }
 
 button[disabled] {
@@ -287,14 +289,5 @@ input[disabled] {
     input {
       padding: 0.9rem 0.875rem;
     }
-  }
-  select {
-    position:              relative;
-    background:            $whiteColor url("../public/icons/arrow-down.svg") center right no-repeat;
-    background-size:       4%;
-    background-position-x: 96%;
-    margin-right:          2rem;
-    padding-right:         2rem;
-    border:                1px solid #dfdfdf;
   }
 }
